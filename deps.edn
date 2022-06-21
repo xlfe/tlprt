@@ -1,0 +1,40 @@
+{:paths ["src"]
+ :deps {
+        ;; Core
+        org.clojure/clojure                  {:mvn/version "1.11.0"}
+        org.clojure/clojurescript            {:mvn/version "1.11.51"}
+
+        ;; zlib for cljs
+        cljsjs/pako                          {:mvn/version "2.0.4-0"}
+
+        ;; zlib for clj
+        net.tbt-post/zlib-tiny               {:mvn/version "0.4.1"}
+
+        com.cognitect/transit-clj            {:mvn/version "1.0.329"}
+        com.cognitect/transit-cljs           {:mvn/version "0.8.269"}}
+
+ 
+ 
+ :aliases {:test-javascript {
+                             :extra-paths ["test"]
+                             :main-opts ["-m" "cljs-test-runner.main"]
+                             :extra-deps {olical/cljs-test-runner {:mvn/version "3.8.0"}}}
+
+           :test            {
+                             :extra-paths ["test"]
+                             :main-opts ["-m" "cognitect.test-runner" "-d" "test"]
+                             :extra-deps {
+                                          com.cognitect/test-runner  
+                                          {:git/url "https://github.com/cognitect-labs/test-runner" 
+                                           :sha "a85b3b02765fb68684ab9ee4a8598eacf7e471d2"}
+
+                                          com.github.seancorfield/expectations 
+                                          {:mvn/version "2.0.160"}}}}}
+ 
+ 
+
+        
+
+
+
+
