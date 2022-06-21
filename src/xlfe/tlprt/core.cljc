@@ -2,7 +2,6 @@
 
   #?(:cljs 
       (:require
-              [clojure.walk]
               [clojure.string]
               [cognitect.transit :as t]
               [cljsjs.pako]
@@ -11,7 +10,6 @@
 
     #?(:clj 
         (:require
-              [clojure.walk]
               [clojure.string]
               [cognitect.transit :as t]
               [zlib-tiny.core :as zlib]))
